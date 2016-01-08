@@ -1,0 +1,8 @@
+{
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"draw_white_space": "all"
+}
