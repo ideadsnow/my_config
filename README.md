@@ -1,2 +1,4 @@
-# vimrc
-vim配置文件
+# 各种工具的配置
+
+1. vim -> .vimrc
+2. sublime text 3 -> Preferences.sublime-settings 
