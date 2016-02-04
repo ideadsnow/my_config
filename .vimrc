@@ -60,7 +60,7 @@ function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "g")
     return curdir
 endfunction
-        set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ %{$USER}\ @\ %{hostname()}\
+set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ %{$USER}\ @\ %{hostname()}\
 
 
 set wildmenu "输入命令用tab自动补全的时候用一个漂亮的单行菜单形式显示出来
