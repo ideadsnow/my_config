@@ -2,6 +2,12 @@
 {
     "files.trimTrailingWhitespace": true,
     "editor.renderWhitespace": "boundary",
-    "editor.fontSize": 13,
-    "window.openFilesInNewWindow": false
+    "editor.fontSize": 15,
+    "window.openFilesInNewWindow": "on",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\cmd.exe",
+    "python.pythonPath": "C:\\Python27",
+    "git.path": "C:\\Program Files\\Git",
+    "window.openFoldersInNewWindow": "on"
 }
