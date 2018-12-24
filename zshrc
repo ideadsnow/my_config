@@ -61,9 +61,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   z
-  iterm2
   zsh-syntax-highlighting
-  colored-man-pages
+  docker 
   tmux
 )
 
@@ -98,6 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# 避免 iterm 命令历史记录跨 tab 共享 
+unsetopt inc_append_history
+unsetopt share_history
+
+source ~/.iterm2_shell_integration.zsh
+
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Android
@@ -109,18 +114,15 @@ alias cman='man -M /usr/local/share/man/zh_CN'
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/Workspace/go
 export PATH=$PATH:$GOPATH/bin
+export GIT_TERMINAL_PROMPT=1
+# export GOPROXY="http://athens.azurefd.net"
+# export GOPROXY="https://goproxy.io"
 
-alias dk=docker
-
+# 自己写的小公举们
 export PATH="/Users/ids/Workspace/tools:$PATH"
 
+# 讲道理我忘记这是干啥的了
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/sbin:$PATH"
 
-source ~/.iterm2_shell_integration.zsh
-
-alias gsuir='git submodule update --init --recursive'
-
-# 避免 iterm 命令历史记录跨 tab 共享 
-unsetopt inc_append_history
-unsetopt share_history
+alias gsu="git submodule update --init --recursive --remote"
