@@ -46,6 +46,7 @@
 
 [[layers]]
   name = "lang#go"
+  enable = false
 
 [[layers]]
   name = "checkers"

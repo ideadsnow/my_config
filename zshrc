@@ -60,10 +60,11 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  z
+  # z
   zsh-syntax-highlighting
-  docker 
-  tmux
+  # docker
+  # tmux
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -97,32 +98,42 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# 避免 iterm 命令历史记录跨 tab 共享 
+# 避免命令历史记录跨 tab 共享 
 unsetopt inc_append_history
 unsetopt share_history
 
-source ~/.iterm2_shell_integration.zsh
+# source ~/.iterm2_shell_integration.zsh
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Android
-export ANDROID_HOME=/Users/ids/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# export ANDROID_HOME=/Users/ids/Library/Android/sdk
+# export PATH=${PATH}:${ANDROID_HOME}/tools
+# export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 alias cman='man -M /usr/local/share/man/zh_CN'
 # Golang
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/Workspace/go
 export PATH=$PATH:$GOPATH/bin
 export GIT_TERMINAL_PROMPT=1
+export GO111MODULE="on"
 # export GOPROXY="http://athens.azurefd.net"
 # export GOPROXY="https://goproxy.io"
+export GOPROXY="http://192.168.0.45:3000"
 
-# 自己写的小公举们
-export PATH="/Users/ids/Workspace/tools:$PATH"
+# export PATH="/Users/ids/Workspace/tools:$PATH"
 
-# 讲道理我忘记这是干啥的了
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# 好像是 tuxera_ntfs 相关
 export PATH="/usr/local/sbin:$PATH"
 
 alias gsu="git submodule update --init --recursive --remote"
+
+alias dk="docker"
+alias dkp="docker ps"
+alias dka="docker ps -a"
+alias dki="docker image ls"
+
+# etcd
+export ETCDCTL_API=3
+
+export PYTHONDONTWRITEBYTECODE=no
